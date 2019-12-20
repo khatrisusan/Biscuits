@@ -1,0 +1,1020 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+* {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    color: white;
+    line-height: 1.6;
+}
+
+body > div {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    height: 60px;
+    position: fixed;
+    background-color: rgb(0, 0, 0, 0.5);
+    width: 100%;
+    z-index: 1;
+}
+
+.logo{
+    float: left;
+    width: 30px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+nav {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 3rem;
+    list-style-type: none;
+}
+
+nav > a {
+    padding: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+nav > a:hover {
+    background-color: white;
+    color: black;
+}
+
+.activeBtn{
+    color: #CCC736;
+}
+
+.change-header {
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.9);
+    z-index: 2;
+    transition: all 0.5s;
+}
+
+.change-nav {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0;
+    text-align: center;
+    margin-top: 60px;
+    transition: all 0.5s;
+}
+
+.bottomMenu {
+    display: flex;
+    float: right;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 49px;
+    height: 49px;
+    z-index: 1;
+    transition: all 1s;
+    transform: rotate(180deg);
+}
+
+.hide {
+    opacity: 0;
+}
+
+.show {
+    opacity: 1;
+}
+
+.mySlides {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    grid-row: 1 / 4;
+    grid-column: 1 / 2;
+    text-align: center;
+    display: grid;
+}
+
+/* Slideshow container */
+
+.slideshow-inner {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 20% 10%;
+}
+
+.slideshow-inner > a {
+    grid-row: 2 /3;
+    grid-column: 1 / 2;
+    z-index: 1;
+    align-self: end;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    cursor: pointer;
+}
+
+.dots {
+    text-align: center;
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    z-index: 1;
+    align-self: end;
+    margin-bottom: 20px;
+}
+
+.mySlides > h1 {
+    font-size: 3rem;
+    padding-top: 16rem;
+}
+
+.active {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+#block {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 20% 80%;
+}
+
+.exhibition_title {
+    grid-row: 1 / 2;
+    text-align: center;
+    align-self: center;
+}
+
+.exhibition_video {
+    width: 90%;
+    height: 90%;
+}
+
+#block > .videoWrapper {
+    grid-row: 2 /3;
+    text-align: center;
+}
+
+#block_2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 10% 20%;
+}
+
+.exhibition_description {
+    padding-left: 15rem;
+    padding-right: 15rem;
+    align-self: center;
+}
+
+.ct-btn-scroll {
+    width: 49px;
+    height: 49px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.read_more > img {
+    width: 7%;
+    transform: rotate(-40deg);
+    margin-bottom: 10%;
+}
+
+.read_more {
+    display: grid;
+    justify-items: end;
+    padding-right: 10%;
+    align-items: start;
+}
+
+#block_3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+#block_3 > img {
+    width: 30rem;
+    place-self: center;
+}
+
+#block_3 > p {
+    align-self: center;
+}
+
+#block_4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
+    column-gap: 3rem;
+    padding-left: 10%;
+    padding-right: 10%;
+    align-items: start;
+}
+
+.title_1 {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    place-self: center;
+}
+
+#block_5 {
+    padding-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+}
+
+#block_5 > article {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(3, auto);
+    grid-row-gap: 1rem;
+    grid-column-gap: 1rem;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 3rem;
+}
+
+.artist_name {
+    grid-row: 1 / 2;
+    grid-column: 1 / 3;
+}
+
+.artist_image {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    width: 150px;
+    height: 150px;
+}
+
+.artist_text {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    text-align: justify;
+}
+
+#block_5 > a {
+    align-self: flex-end;
+    order: 3;
+    padding-top: 3rem;
+}
+
+article > a {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    color: #83A745;
+}
+
+/* responsive burger menu */
+
+.hamburger {
+    padding: 16px 25px;
+    display: inline-block;
+    cursor: pointer;
+    transition-property: opacity, filter;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    text-transform: none;
+    background-color: transparent;
+    overflow: visible;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+
+.hamburger:hover {
+    opacity: 0.7;
+}
+
+.hamburger.is-active:hover {
+    opacity: 0.7;
+}
+
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+    background-color: white;
+}
+
+.hamburger-box {
+    width: 40px;
+    height: 24px;
+    display: inline-block;
+    position: relative;
+}
+
+.hamburger-inner {
+    display: block;
+    top: 50%;
+    margin-top: -2px;
+}
+
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+    width: 40px;
+    height: 4px;
+    background-color: white;
+    border-radius: 4px;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease;
+}
+
+.hamburger-inner::before,
+.hamburger-inner::after {
+    content: "";
+    display: block;
+}
+
+.hamburger-inner::before {
+    top: -10px;
+}
+
+.hamburger-inner::after {
+    bottom: -10px;
+}
+
+/* Arrow */
+
+.hamburger--arrow.is-active .hamburger-inner::before {
+    transform: translate3d(-8px, 0, 0) rotate(-45deg) scale(0.7, 1);
+}
+
+.hamburger--arrow.is-active .hamburger-inner::after {
+    transform: translate3d(-8px, 0, 0) rotate(45deg) scale(0.7, 1);
+}
+
+
+
+#block_6 {
+    display: grid;
+    height: auto;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+    grid-column-gap: 3rem;
+    grid-row-gap: 3rem;
+    padding-top: 3rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+#block_6 > p {
+    padding: 0;
+    text-align: justify;
+}
+
+/*.exhibition_description_2{
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.exhibition_description{
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}*/
+
+#block_6 > .mySlides {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+    height: 30rem;
+}
+
+#block_6 > .dots {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+    align-self: end;
+    margin-bottom: 0;
+}
+
+#block_6 > a {
+    position: inherit;
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+    align-self: center;
+    z-index: 1;
+}
+
+#block_6 > .next {
+    justify-self: end;
+}
+
+#block_6 > .prev {
+    justify-self: start;
+}
+
+#block_7 {
+    display: grid;
+    height: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, auto);
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-top: 5rem;
+    text-align: justify;
+    grid-row-gap: 3rem;
+    grid-column-gap: 3rem;
+}
+
+#block_7 > h2 {
+    text-align: center;
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+}
+
+details > p {
+    padding-top: 1rem;
+}
+
+summary {
+    border-bottom: solid;
+    border-top: solid;
+    line-height: 3;
+    cursor: pointer;
+}
+
+details summary ~ * {
+    animation: sweep 0.4s ease-in-out;
+}
+
+@keyframes sweep {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, -10%, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+details[open] summary ~ * {
+    animation: sweep 0.4s ease-in-out;
+}
+
+@keyframes sweep {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, -10%, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+
+.changeSummary {
+    border-color: #CCC736;
+}
+
+#block_7 > p {
+    text-align: center;
+}
+
+.poem_author {
+    grid-column: 1 / 3;
+}
+
+#block_8, #block_10{
+    padding-bottom: 10rem;
+}
+
+#block_8 {
+    display: grid;
+    height: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, auto);
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-top: 5rem;
+    grid-row-gap: 3rem;
+    grid-column-gap: 3rem;
+}
+
+.mix_title {
+    grid-column: 1 / 3;
+    text-align: center;
+}
+
+#block_8 > iframe {
+    height: 140px;
+}
+
+#block_9 {
+    display: grid;
+    height: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, auto);
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-top: 5rem;
+    grid-row-gap: 3rem;
+    grid-column-gap: 3rem;
+    text-align: left;
+    word-break: break-word;
+}
+
+#block_9 > h2 {
+    grid-column: 1 / 3;
+    text-align: center;
+}
+
+#block_9 > .videoWrapper {
+    padding: 56.25% 0 0 0;
+    position: relative;
+    grid-column: 1 / 3;
+    grid-row: 4 / 5;
+}
+
+.lysstof_desc {
+    grid-row: 2 / 4;
+    grid-column: 2 / 3;
+}
+
+.past_of_artists {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+#block_9 > img {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    width: 100%;
+}
+
+.exhib_video {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.link_to_video {
+    display: none;
+}
+
+#block_10 {
+    display: grid;
+    height: auto;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(3, auto);
+    grid-row-gap: 1rem;
+    grid-column-gap: 1rem;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5rem;
+    text-align: justify;
+}
+
+#block_10 > img {
+    width: 150px;
+    height: 150px;
+}
+
+#block_10 > h2 {
+    text-align: center;
+    grid-column: 1 / 3;
+}
+
+.poem_author {
+    padding-top: 3rem;
+}
+
+.poster_block {
+    padding-top: 5rem;
+}
+
+#block_11 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
+    justify-items: center;
+}
+
+#block_11 > h2 {
+    text-align: center;
+    grid-column: 1 / 3;
+    grid-row: 1 /2;
+    align-self: center;
+}
+
+.contact_1 {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+.contact_2 {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.contact_3 {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+}
+
+
+
+
+
+
+@media only screen and (max-width: 1024px) {
+
+    .exhibition_description {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+
+    #block_3 {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        height: auto;
+        justify-items: center;
+    }
+
+    #block_3 > img {
+        width: 30rem;
+        grid-row: 2 / 3;
+        padding-top: 5rem;
+    }
+
+    #block_3 > p {
+        grid-row: 1 / 2;
+        align-self: start;
+    }
+
+    #block_4 {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, auto);
+        height: auto;
+        grid-row-gap: 3rem;
+        padding-top: 3rem;
+        column-gap: 0;
+    }
+
+    .poem_1 {
+        grid-row: 2 / 3;
+    }
+
+    .poem_2 {
+        grid-row: 4 / 5;
+    }
+
+    .audio_1 {
+        grid-row: 3 / 4;
+    }
+
+    .audio_2 {
+        grid-row: 5 / 6;
+    }
+
+    #block_6 {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        grid-column-gap: 1.5rem;
+    }
+
+    #block_7 {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    #block_8 {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    .mix_title {
+        grid-column: 1 / 2;
+        text-align: center;
+    }
+
+    #block_8 > .audio_1 {
+        grid-row: auto;
+    }
+
+    #block_8 > .audio_2 {
+        grid-row: auto;
+    }
+
+    #block_9 {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, auto);
+    }
+
+    #block_9 > h2 {
+        grid-column: 1 / 2;
+    }
+
+    #block_9 > .videoWrapper {
+        grid-column: 1 / 2;
+        grid-row: 5 / 6;
+    }
+
+    .lysstof_desc {
+        grid-row: 4 / 5;
+        grid-column: 1 / 2;
+    }
+
+    .past_of_artists {
+        grid-row: 2 / 3;
+    }
+
+    #block_9 > img {
+        grid-row: 3 / 4;
+    }
+
+    #block_11 {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, auto);
+        justify-items: left;
+        padding-left: 3rem;
+    }
+
+    #block_11 > h2 {
+        grid-column: 1 / 2;
+        justify-self: center;
+    }
+
+    .contact_1 {
+        grid-row: 2 / 3;
+    }
+
+    .contact_2 {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+    }
+
+    .contact_3 {
+        grid-row: 4 / 5;
+    }
+
+    @media only screen and (max-width: 600px) {
+
+        .slideshow-inner > h1 {
+            font-size: 2rem;
+        }
+
+        .exhibition_description {
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+        .read_more > img {
+            width: 10%;
+        }
+
+        #block_3 > img {
+            width: 20rem;
+        }
+
+        #block_5 > article {
+            grid-template-columns: auto;
+            grid-template-rows: repeat(4, auto);
+            justify-items: center;
+        }
+
+        .artist_name {
+            grid-column: 1 / 2;
+        }
+
+        .artist_image {
+            grid-column: 1 / 2;
+            width: 300px;
+            height: 300px;
+        }
+
+        .artist_text {
+            grid-row: 3 / 4;
+            grid-column: 1 / 2;
+        }
+
+        article > a {
+            grid-column: 1 / 2;
+            grid-row: 4 / 5;
+        }
+
+        .hamburger {
+            display: block;
+        }
+
+        nav {
+            display: none;
+        }
+
+        #block_6 {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, auto);
+        }
+
+        #block_6 > .mySlides {
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+            height: 40rem;
+        }
+
+        #block_6 > .dots {
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+            align-self: end;
+            margin-bottom: 0;
+        }
+
+        #block_6 > a {
+            position: inherit;
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+            align-self: center;
+            z-index: 1;
+        }
+
+        #block_7 {
+            grid-template-columns: 1fr;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+
+        #block_7 > h2 {
+            grid-column: 1 / 2;
+        }
+
+        .poem_author {
+            grid-column: 1 / 2;
+        }
+
+        #block_8,
+        #block_9 {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+
+        #block_9 > .videoWrapper {
+            display: none;
+        }
+
+        .link_to_video {
+            display: grid;
+            grid-column: 1 / 2;
+            grid-row: 5 / 6;
+            color: #83A745;
+        }
+
+        #block_10 {
+            grid-template-rows: repeat(4, auto);
+            justify-items: center;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+
+        #block_10 > img {
+            grid-row: 3 / 4;
+            width: 300px;
+            height: 300px;
+        }
+
+        .desc_author {
+            grid-row: 4 / 5;
+        }
+
+        .poem_author {
+            padding-top: 0;
+        }
+
+        .poster_block{
+            justify-items: center;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+
+         #block_11 {
+        justify-items: center;
+        padding-left: 0;
+    }
+
+    }
+
+    @media only screen and (max-width: 420px) {
+
+        #block_2 {
+            height: auto;
+        }
+
+        #block_2 > .ct-btn-scroll {
+            display: none;
+        }
+
+        .exhibition_description {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+
+        #block_3 > img {
+            width: 17rem;
+        }
+
+        #block_4 {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+
+        .artist_text {
+            text-align: left;
+        }
+
+        .artist_image {
+            width: 240px;
+            height: 240px;
+        }
+
+        #block_10 > img {
+            width: 240px;
+            height: 240px;
+        }
+    }

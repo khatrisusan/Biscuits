@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <title>Living Landscape</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="favicon/site.webmanifest">
+<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="black">
+<meta name="robots" content="noindex" />
+</head>
+
+<body>
+
+   <a href="#top_block"><img id="myID" class="bottomMenu hide" src="https://www.solodev.com/assets/anchor/arrow-down.png" alt="arrow_scroll"></a>
+
+    <header>
+      <a href="home.html"><img class="logo" src="Logo/logo.png" alt="logo"></a>
+       <nav>
+        </nav>
+
+        <div class="hamburger hamburger--arrow" onclick="changeBurger()">
+    <div class="hamburger-box">
+      <div class="hamburger-inner"></div>
+    </div>
+  </div>
+    </header>
+
+
+        <div class="slideshow-inner" id="top_block">
+
+            <div class="mySlides fade slideshow_1">
+            <h1>Is this our world?</h1>
+            </div>
+
+            <div class="mySlides fade slideshow_2">
+            <h1>This is our world</h1>
+            </div>
+
+            <div class="mySlides fade slideshow_3">
+            <h1>Is this our world?</h1>
+            </div>
+
+            <div class="mySlides fade slideshow_4">
+            <h1>This is our world</h1>
+            </div>
+
+            <div class="mySlides fade slideshow_5">
+            <h1>Is this our world?</h1>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <div class="dots">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+            </div>
+             <a class="ct-btn-scroll ct-js-btn-scroll" href="#block"><img alt="Arrow Down Icon" src="https://www.solodev.com/assets/anchor/arrow-down.png"></a>
+        </div>
+
+
+    <div id="block">
+       <h2 class="exhibition_title">Title</h2>
+        <div class="videoWrapper">
+            <iframe class="exhibition_video" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div id="block_2">
+        <p class="exhibition_description"></p>
+
+        <a class="read_more" href="exhibition.html">
+        <p>Read More</p>
+        <img src="curved_arrow.png" alt="read_more">
+        </a>
+
+        <a class="ct-btn-scroll ct-js-btn-scroll" href="#block_3"><img alt="Arrow Down Icon" src="https://www.solodev.com/assets/anchor/arrow-down.png"></a>
+
+
+    </div>
+
+
+<div id="block_3">
+    <img class="poster" alt="poster">
+    <p class="opening_info"></p>
+</div>
+
+    <div id="block_4">
+
+        <h2 class="title_1">Title</h2>
+        <p class="poem_1"></p>
+        <p class="poem_2"></p>
+
+<iframe class="audio_1" width="100%" height="140" scrolling="no" frameborder="no" allow="autoplay" ></iframe>
+   <iframe class="audio_2" width="100%" height="140" scrolling="no" frameborder="no" allow="autoplay" ></iframe>
+    </div>
+
+    <div id="block_5">
+
+        <h2>Artists</h2>
+
+         <a class="read_more" href="artists.html">
+        <p>Read More</p>
+        <img src="curved_arrow.png" alt="read_more">
+        </a>
+    </div>
+
+   <template class="artistsTemplate">
+
+        <article>
+
+        <h4 class="artist_name"></h4>
+        <img class="artist_image">
+        <p class="artist_text"></p>
+
+        </article>
+
+   </template>
+
+
+</body>
+<script src="main.js"></script>
+
+</html>
